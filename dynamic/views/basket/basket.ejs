@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <link rel="stylesheet" href="/css/basket.css" />
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+<div class="navbar">
+      <div class="header">
+        <a href="/"><img
+          
+          class="logo"
+          src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Logo__theskinstore.in_Logo_2-02_200x@2x.png?v=1606890994"
+          alt=""
+        /></a>
+        
+        <input class="search" type="text" placeholder="Search..." />
+        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+        <div class="login hoverDiv">
+          <span class="loginSignup"><a class="loginSignup" href="/signup" >Login & Signup</a></span>
+          <br />
+          <a class="myaccount" href="">My account</a>
+        </div>
+         <%if(checkLogin1.Email !== undefined){%>
+            <div class="loginDivBox">  
+              <p id="loginId" class="idForCheckLogin"><%= checkLogin1.Email%> <br> </p>
+           
+              <p id="loginId" > <a id="loginId" href="/login/logout">Logout</a></p>
+            </div>
+            <%} else {%>
+            <div class="loginDivBox">
+              <p id="loginId"><a class="idForCheckLogin" href="/login"><%= checkLogin1%></a> <br> </p>
+            </div>
+            <%} %>
+        <div class="line"></div>
+        <div  class="cartPart"><a class="cartPart" href="/basket">
+          <img src="https://www.linkpicture.com/q/ab_1.png" />
+          <p>Cart</p></a>
+        </div>
+
+
+      </div>
+      <div class="navBottom_links">
+        <div class="links">
+          <li><a class="men" href="">SKIN</a></li>
+          <!-- HOVER START -->
+          <div class="men-modal">
+            <div class="category"></div>
+            <div class="cat-min">
+              <div class="cat-1">
+                <h3>FACE</h3>
+                <br />
+                <p><a href="/product">BRIGHTENING LOTION</a></p>
+                <p>FACIAL CLEANSER</p>
+                <p>CREAMS</p>
+                <p>DECOLLETE & NECK CREAM</p>
+                <p>FACE MOISTURIZER</p>
+                <p>LOTION</p>
+                <p>MASKS</p>
+                <p>MOISTURIZER</p>
+                <p>SCRUB & EXFOLIATORS</p>
+                <p>SERUMS</p>
+                <p>SUNSCREENS</p>
+                <p>TONER & ASTRINGENTS</p>
+              </div>
+              <div class="cat-2">
+                <h3>BODY</h3>
+                <br />
+                <p>BODY LOTION</p>
+                <p>BODY MASSAGE OIL</p>
+                <p>BODY MOISTURIZER</p>
+                <p>BODY OIL</p>
+                <p>BODY WASH</p>
+                <p>CREAMS</p>
+                <p>LOTION</p>
+              </div>
+              <div class="cat-3">
+                <h3>EYE</h3>
+                <br />
+                <p>
+                  <a>EYE CONTOUR CARE</a>
+                </p>
+                <p>EYE CREAM</p>
+                <p>EYE MASKS</p>
+                <p>EYE SERUMS</p>
+                <p>UNDER EYE CREAMS</p>
+                <p>UNDER EYE WRINKLES</p>
+              </div>
+              <div class="cat-4">
+                <h3>SUNSCREENS</h3>
+                <br />
+                <p>EMULSION</p>
+                <p>FLUID</p>
+                <p>GEL</p>
+                <p>LOTION</p>
+                <p>SPRAY</p>
+              </div>
+              <div class="cat-5">
+                <h3>HAND, NAIL & FOOT</h3>
+                <br />
+                <p>FOOT CREAMS</p>
+                <p>HAND CREAMS</p>
+                <p>MASKS</p>
+              </div>
+              <div class="cat-6">
+                <h3>LIPS</h3>
+                <br />
+                <p>CREAMS</p>
+                <p>LIP BALMS</p>
+              </div>
+            </div>
+          </div>
+          <!-- HOVER END -->
+          <li><a href="">HAIR</a></li>
+          <li><a href="">MAKEUP</a></li>
+          <li><a href="">PERSONAL CARE</a></li>
+          <li><a href="">BABY & MOM</a></li>
+          <li><a href="">HOUSEHOLD SUPPLIES</a></li>
+          <li><a href="">BRANDS</a></li>
+          <li><a href="">YOUR CONCERN</a></li>
+          <li><a href="">WISHLIST</a></li>
+          <li><a href="">REWARDS</a></li>
+        </div>
+      </div>
+    </div>
+    <!-- NAVBAR END -->
+
+   <div class="mycart">
+      <p>My Cart</p>
+      <span class="shopMore" id="shopMore"><a href="/product">Shop More ></a>></span>
+    </div>
+
+
+    <div id="productCart">
+     <% products.forEach((el)=>{%>
+            
+          <div class='productdiv'>
+            
+            <div class="productimg">
+              <img class="productimg" src=<%= el.image%> alt="">
+            </div>
+            <p class="productname"><%= el.name%></p>
+            <p id="cart_count">Count: (<%= el.count/1%>)</p>
+            
+            <p id="proRemove" ><a href="/basket/remove/<%= el._id%>"> Remove</a></p>
+            
+            <span id="floatAll">
+              <h3 class='rs'>Rs. <%=el.price%></h3>
+           
+           
+            </span>  
+          </div>
+          <%})%>
+
+    </div>
+    <div class="right">
+
+   <% 
+        TotalMrp = 0;
+ 
+        SubTotal = 0;
+        OrderTotal = 0;
+     
+        products.forEach((el)=>{
+          TotalMrp += el.price * el.count/1;
+          OrderTotal = TotalMrp+50
+        })
+   
+       ;
+      
+        %>
+
+      <input
+        class="coupon"
+        type="text"
+        placeholder="Gift card or discount code"
+      />
+      <button onclick="applyCouponFun()">Apply</button>
+      <br />
+      <br />
+      <br />
+      <hr />
+      <div class="sub">
+        <p>Subtotal</p>
+        <p>Rs. <%= TotalMrp%></p>
+      </div>
+      <div class="shipping">
+        <p>Shipping</p>
+        <p>Rs. 50</p>
+      </div>
+      <hr />
+      <div class="subtotal">
+        <p>Total</p>
+        <p>Rs. <%= OrderTotal%></p>
+      </div>
+      <hr>
+      <button id="checkout" onclick="checkout()"><a id="checkout"  href="/address">Checkout</a></button>
+    </div>
+
+   <img class="footer" src="https://www.linkpicture.com/q/footer.jpg" alt="">
+  </body>
+</html>
+<script src="/scripts/basket.js"></script>

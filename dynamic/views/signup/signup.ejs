@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <link rel="stylesheet" href="/css/signup.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <%- include("../../partials/navbar.ejs")%>
+    <!-- -------------- -->
+    <div class="newuser">
+      <h3>Create my account</h3>
+      <p>Please fill in the information below:</p>
+   
+      <form action="/signup/post" method="POST">
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          placeholder="firstname"
+          required
+        />
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="lastname"
+          required
+        />
+        <input
+          type="text"
+          id="email"
+          name="Email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="Password"
+          placeholder="password"
+        />
+
+        <input class="loginbtn" type="submit" class="fwb" value="Create my account" />
+      </form>
+      <p>
+        Already have an account? <a href="/login">Login</a>
+      </p>
+    </div>
+  </body>
+</html>
+<script src="/scripts/signup.js">

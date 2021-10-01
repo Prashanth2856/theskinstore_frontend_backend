@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/ProductPage.css" />
+  </head>
+
+  <body>
+<%- include("../../partials/navbar.ejs")%>
+  <!-- ---------------- -->
+    <div id="sort">
+      <p>Sort by:</p>
+      <button class="sort"><a class="sorta" href="/product/lth">Low to high</a></button>
+      <button class="sort"><a class="sorta" href="/product/htl">High to low</a></button>
+      
+    </div>
+
+
+    
+    <div id="products">
+           <% products.forEach((el)=>{%>
+            <div id="gDiv">
+              <img id="gridImage" src=<%=el.image%> alt="">
+                <p id="proName"><%= el.name%></p>
+                 <div id="floatAll">
+                 <p id="h333">Rs. <%=el.price%></p>
+              </div>
+              <%if(checkLogin1.Email !== undefined){%>
+              <a href="/cart/<%= el._id%>" onclick= 
+                "alert('Product added to cart successfully')">
+                <button id="addToCart">Add to cart</button></a>
+                <%} else {%>
+                  <a onclick= 
+                "alert('Please Login First')">
+                <button id="addToCart">Add to cart</button></a>
+                <%}%>
+            
+             
+            </div>
+        <%})%>
+
+    </div>
+ <img class="footer" src="https://www.linkpicture.com/q/footer.jpg" alt="">
+  </body>
+</html>
+<script src="/scripts/ProductPage.js"></script>

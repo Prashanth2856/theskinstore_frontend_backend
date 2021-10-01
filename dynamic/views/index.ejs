@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR START -->
+ <div class="navbar">
+      <div class="header">
+        <a href="/"><img
+          
+          class="logo"
+          src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Logo__theskinstore.in_Logo_2-02_200x@2x.png?v=1606890994"
+          alt=""
+        /></a>
+        
+        <input class="search" type="text" placeholder="Search..." />
+        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+        <div class="login hoverDiv">
+          <span class="loginSignup"><a class="loginSignup" href="/signup" >Login & Signup</a></span>
+          <br />
+          <a class="myaccount" href="">My account</a>
+        </div>
+       <%if(checkLogin1.Email !== undefined){%>
+            <div class="loginDivBox">  
+              <p id="loginId" class="idForCheckLogin"><%= checkLogin1.Email%> <br> </p>
+           
+              <p id="loginId" > <a id="loginId" href="/login/logout">Logout</a></p>
+            </div>
+            <%} else {%>
+            <div class="loginDivBox">
+              <p id="loginId"><a class="idForCheckLogin" href="/login"><%= checkLogin1%></a> <br> </p>
+            </div>
+            <%} %>
+        <div class="line"></div>
+        <div  class="cartPart"><a class="cartPart" href="/basket">
+          <img src="https://www.linkpicture.com/q/ab_1.png" />
+          <p>Cart</p></a>
+        </div>
+
+
+      </div>
+      <div class="navBottom_links">
+        <div class="links">
+          <li><a class="men" href="">SKIN</a></li>
+          <!-- HOVER START -->
+          <div class="men-modal">
+            <div class="category"></div>
+            <div class="cat-min">
+              <div class="cat-1">
+                <h3>FACE</h3>
+                <br />
+                <p><a href="/product">BRIGHTENING LOTION</a></p>
+                <p>FACIAL CLEANSER</p>
+                <p>CREAMS</p>
+                <p>DECOLLETE & NECK CREAM</p>
+                <p>FACE MOISTURIZER</p>
+                <p>LOTION</p>
+                <p>MASKS</p>
+                <p>MOISTURIZER</p>
+                <p>SCRUB & EXFOLIATORS</p>
+                <p>SERUMS</p>
+                <p>SUNSCREENS</p>
+                <p>TONER & ASTRINGENTS</p>
+              </div>
+              <div class="cat-2">
+                <h3>BODY</h3>
+                <br />
+                <p>BODY LOTION</p>
+                <p>BODY MASSAGE OIL</p>
+                <p>BODY MOISTURIZER</p>
+                <p>BODY OIL</p>
+                <p>BODY WASH</p>
+                <p>CREAMS</p>
+                <p>LOTION</p>
+              </div>
+              <div class="cat-3">
+                <h3>EYE</h3>
+                <br />
+                <p>
+                  <a>EYE CONTOUR CARE</a>
+                </p>
+                <p>EYE CREAM</p>
+                <p>EYE MASKS</p>
+                <p>EYE SERUMS</p>
+                <p>UNDER EYE CREAMS</p>
+                <p>UNDER EYE WRINKLES</p>
+              </div>
+              <div class="cat-4">
+                <h3>SUNSCREENS</h3>
+                <br />
+                <p>EMULSION</p>
+                <p>FLUID</p>
+                <p>GEL</p>
+                <p>LOTION</p>
+                <p>SPRAY</p>
+              </div>
+              <div class="cat-5">
+                <h3>HAND, NAIL & FOOT</h3>
+                <br />
+                <p>FOOT CREAMS</p>
+                <p>HAND CREAMS</p>
+                <p>MASKS</p>
+              </div>
+              <div class="cat-6">
+                <h3>LIPS</h3>
+                <br />
+                <p>CREAMS</p>
+                <p>LIP BALMS</p>
+              </div>
+            </div>
+          </div>
+          <!-- HOVER END -->
+          <li><a href="">HAIR</a></li>
+          <li><a href="">MAKEUP</a></li>
+          <li><a href="">PERSONAL CARE</a></li>
+          <li><a href="">BABY & MOM</a></li>
+          <li><a href="">HOUSEHOLD SUPPLIES</a></li>
+          <li><a href="">BRANDS</a></li>
+          <li><a href="">YOUR CONCERN</a></li>
+          <li><a href="">WISHLIST</a></li>
+          <li><a href="">REWARDS</a></li>
+        </div>
+      </div>
+    </div>
+    <!-- NAVBAR END -->
+
+    <!-- SLIDESHOW START -->
+    <div id="slideshow"></div>
+    <!-- SLIDESHOW END -->
+
+    <!-- FEATURED COLLECTION START -->
+    <h2 class="featured_h2">Featured Collection</h2>
+
+    <div class="featured">
+      <img
+        class="featured1"
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/FaceHalo_600x.jpg?v=1613732371"
+        alt=""
+      />
+      <img
+        class="featured2"
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Is_clinical_0330e29e-84cf-445d-babe-65fa222f547a_800x.jpg?v=1612873740"
+        alt=""
+      />
+      <img
+        class="featured3"
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Wellexir_600x.jpg?v=1612873310"
+        alt=""
+      />
+    </div>
+    <!-- FEATURED COLLECTION END -->
+
+    <!-- BEST SELLERS START -->
+    <h2 class="featured_h2">Best Sellers</h2>
+
+    <div class="featured">
+      <img
+        class="featured1"
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Naturigin_600x.jpg?v=1612873427"
+        alt=""
+      />
+      <img
+        class="featured2"
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/SBh_BaNNEr_5af01936-6298-4565-9990-6fb578cb0916_800x.jpg?v=1612873623"
+        alt=""
+      />
+      <img
+        class="featured3"
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Sesderma_b08a159d-1a0e-4798-8848-2baf04b67bec_600x.jpg?v=1606890630"
+        alt=""
+      />
+    </div>
+
+    <!-- BEST SELLERS END -->
+
+    <!-- IMAGE GRID START -->
+    <div class="imageGrid">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Organic_e39023a7-0943-48f9-95ca-73ee8d1e97b1_1200x.jpg?v=1606890678"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Baby_Care_1200x.jpg?v=1606890799"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Featured_collection.psdHair_Products_2_1200x.jpg?v=1606890771"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Hair_Accessories_8ae8e66b-52a6-46b2-b40a-9decf61405de_1200x.jpg?v=1606890758"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Anti_Aging_1200x.jpg?v=1606890735"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Stay_Fit_and_healthy_1200x.jpg?v=1606890710"
+        alt=""
+      />
+    </div>
+    <!-- IMAGE GRID END -->
+
+    <!-- PRODUCT CATEGORIES START -->
+    <h2 class="featured_h2">Product Categories</h2>
+    <div class="productSlideShow">
+      <div id="product_div">
+        <main>
+          <span class="navButton">&#10094;</span>
+          <span class="navButton">&#10095;</span>
+          <section class="product_section">
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/sHAMPOO_300x.png?v=1606890838"
+                  alt=""
+              /></a>
+              <p class="name">Shampoo</p>
+            </div>
+
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/sUNSCREEN_300x.png?v=1606890847"
+                  alt=""
+              /></a>
+              <p class="name">Sunscreens</p>
+            </div>
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/hAIRCOLOR_300x.png?v=1606890879"
+                  alt=""
+              /></a>
+              <p class="name">Hair Colours / Dye</p>
+            </div>
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/fACIAL_mASKS_300x.png?v=1606890889"
+                  alt=""
+              /></a>
+              <p class="name">Masks</p>
+            </div>
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/hAIR_sERUM_300x.png?v=1606890896"
+                  alt=""
+              /></a>
+              <p class="name">Serums</p>
+            </div>
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/mAKE_UP_300x.png?v=1606890869"
+                  alt=""
+              /></a>
+              <p class="name">Makeup</p>
+            </div>
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/mOISTIRISER_300x.png?v=1606890858"
+                  alt=""
+              /></a>
+              <p class="name">Moisturizer</p>
+            </div>
+            <div class="product_img_div">
+              <a href="#">
+                <img
+                  class="product_img"
+                  src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/hAIR_ACCESSORIES_300x.png?v=1606890904"
+                  alt=""
+              /></a>
+              <p class="name">Tools & Accessories</p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- PRODUCT CATEGORIES END -->
+
+    <!-- TOP SELLING BRANDS START -->
+    <h2 class="featured_h2">Top Selling Brands</h2>
+
+    <div class="topSelling">
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Sesderma_b8690862-ccf0-41d4-9c12-b88d65fc6762_280x.jpg?v=1606890921"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Dermaceutic_fa2eb10d-2738-4694-b2c7-05c7e5486791_280x.jpg?v=1606890931"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/SugarBearHair_New_280x.jpg?v=1606890941"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/SmoothSkin_280x.jpg?v=1606890951"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Viviscal_fff6b1c7-0a9c-4daf-b54b-d69556970488_280x.jpg?v=1606890960"
+        alt=""
+      />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0415/0548/9058/files/Alkmene_280x.jpg?v=1606890968"
+        alt=""
+      />
+    </div>
+    <!-- TOP SELLING BRANDS END -->
+
+    <!-- BLOG POST START -->
+    <h2 class="blog">Blog Posts</h2>
+    <br />
+
+    <div id="blog">
+      <div class="blog1">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0415/0548/9058/articles/October-Blog4_600x.png?v=1610436902"
+          alt=""
+        />
+        <a href=""
+          >Multivitamins for those Who Love to Multi-Task, Get<br />
+          Out of Life by Staying Fit and Fabulous</a
+        >
+        <br />
+        <br />
+        <p>
+          Hey Multitasking Ninja, does getting your daily dose of vitamins<br />
+          come at the cost of gulping down huge, smelly multivitamin pills?<br />Ugh!
+          Stop swallo...
+        </p>
+      </div>
+      <div class="blog1">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0415/0548/9058/articles/October-Blog3_14f455c6-0069-4172-9e10-621a1def29e8_600x.jpg?v=1610436710"
+          alt=""
+        />
+        <a href=""
+          >Adding the Fun in Functional - Great Sprunchies that<br />Care for
+          Your Hair</a
+        >
+        <br />
+        <br />
+        <p>
+          “My hair tie is super stylish and functional at the same time.”, said
+          no<br />
+          girl ever! But things are about to change, because ‘Fun meets<br />Functional’
+          ...
+        </p>
+      </div>
+      <div class="blog1">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0415/0548/9058/articles/Blog_2Updated_and_compressed_600x.jpg?v=1610439023"
+          alt=""
+        />
+        <a href=""
+          >Investing in Facial Care: Top 5 Products That You Must<br />Consider
+          if You Have Acne-prone Skin</a
+        >
+        <br />
+        <br />
+        <p>
+          Promise yourself, you won’t stress about anything you can’t
+          control,<br />
+          not even acne. But don’t fret! Acne is difficult, but not<br />unmanageable.
+          When y...
+        </p>
+      </div>
+    </div>
+    <!-- BLOG POST END -->
+
+    <!-- FOOTER START -->
+
+     <img class="footer" src="https://www.linkpicture.com/q/footer.jpg" alt="">
+    <!-- FOOTER END -->
+  </body>
+</html>
+<script src="/scripts/index.js"></script>
