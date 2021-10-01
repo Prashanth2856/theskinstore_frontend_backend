@@ -25,6 +25,9 @@ To make this clone I have used HTMl, CSS and JavaScript for front-end and NodeJS
 
 # Libraries Used
 
+- Bootstrap
+
+
 All the images, icons, and links have taken from the original website (https://theskinstore.in/)
 
 # Snapshots of My Project 📸
@@ -89,7 +92,7 @@ This entire journey of making the project was awesome. I learned lots of things 
 
 # Team Members 🤝🏻
 
-### I have done this project alone within 3 days, here I am providing my github profile link:
+### I have done this project alone within 3 days:
 
 1. Prashanth Dyavanapally
 
