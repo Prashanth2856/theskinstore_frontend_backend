@@ -50,7 +50,7 @@ router.get('/', async (req, res) => {
             const allProducts = await Product.find().lean().exec();
             // console.log('allProducts:', allProducts)
             let products = [];
-            console.log(userProducts.holding_product);
+            // console.log(userProducts.holding_product);
             for (let i = 0; i < userProducts.holding_product.length; i++) {
                 for (let j = 0; j < allProducts.length; j++) {
                     if (

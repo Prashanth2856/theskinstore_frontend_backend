@@ -55,7 +55,7 @@ router.get("/htl", async (req, res) => {
     });
 
     const checkLogin = await Login.find().lean().exec();
-    console.log(checkLogin.length);
+    // console.log(checkLogin.length);
     const checkLogin1 = checkLogin[0];
     if (checkLogin.length != 0) {
       const products = await Product.find().sort({ price: -1 }).lean().exec();
@@ -81,7 +81,7 @@ router.get("/lth", async (req, res) => {
     });
 
     const checkLogin = await Login.find().lean().exec();
-    console.log(checkLogin.length);
+    // console.log(checkLogin.length);
     const checkLogin1 = checkLogin[0];
     if (checkLogin.length != 0) {
       const products = await Product.find().sort({ price: 1 }).lean().exec();

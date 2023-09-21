@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/", async (req, res) => {
   try {
     const checkLogin = await Login.find().lean().exec();
-    console.log(checkLogin.length);
+    // console.log(checkLogin.length);
     const checkLogin1 = checkLogin[0];
     if (checkLogin.length != 0) {
       const currentUser = await Login.find().lean().exec();

@@ -7,15 +7,15 @@ const Signup = require("../models/model.signup");
 router.get("/", async (req, res) => {
   try {
     const checkLogin = await Login.find().lean().exec();
-    console.log(checkLogin.length);
+    // console.log(checkLogin.length);
     const checkLogin1 = checkLogin[0];
     if (checkLogin.length != 0) {
       const currentUser = await Login.find().lean().exec();
       const userProduct = await Signup.findById(currentUser[0]._id);
       let orderHistory = [];
       for (let i = 0; i < userProduct.holding_product.length; i++) {
-        console.log("userProduct:", userProduct.holding_product[i]);
-        console.log("userProduct:", userProduct.holding_product_cnt[i]);
+        // console.log("userProduct:", userProduct.holding_product[i]);
+        // console.log("userProduct:", userProduct.holding_product_cnt[i]);
         let name = userProduct.holding_product[i];
         let count = userProduct.holding_product_cnt[i];
         orderHistory.push({ name, count });
@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
       const orderProducts = await Signup.findById(userProduct._id)
         .lean()
         .exec();
-      console.log("orderProducts:", orderProducts.oreder_history);
+      // console.log("orderProducts:", orderProducts.oreder_history);
       const products = orderProducts.oreder_history;
 
       res

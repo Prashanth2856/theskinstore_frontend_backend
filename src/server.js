@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "../static")));
 // const staticPath = path.join(__dirname, "public");
 // app.use(express.static(staticPath))
 
-console.log(path.join(__dirname, "../dynamic/views"));
+// console.log(path.join(__dirname, "../dynamic/views"));
 
 // Register the view engine
 app.set("view engine", "ejs");
