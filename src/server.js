@@ -69,5 +69,6 @@ app.use("/thankyou", thankyouController);
 
 app.listen(2222, async () => {
   await connect();
+  console.log("DB Connected");
   console.log("Listening on port 2222");
 });
